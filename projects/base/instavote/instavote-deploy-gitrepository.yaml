@@ -5,6 +5,8 @@ metadata:
   name: instavote-deploy
   namespace: instavote
 spec:
+  secretRef:
+    name: github-instavote
   interval: 1m0s
   ref:
     branch: main
