@@ -2,7 +2,7 @@ apiVersion: flagger.app/v1beta1
 kind: MetricTemplate
 metadata:
   name: error-rate
-  namespace: flux-system
+  namespace: flagger-system
 spec:
   provider:
     type: prometheus
