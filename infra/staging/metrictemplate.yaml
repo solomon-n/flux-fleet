@@ -6,24 +6,24 @@ metadata:
 spec:
   provider:
     type: prometheus
-    address: http://flagger-prometheus:9090
+    address: http://promethues.monitoring:9090
   query: |
     100 - sum(
       rate(
         nginx_ingress_controller_requests{
-          namespace="{{ namespace }}",
+          exported_namespace="{{ namespace }}",
           ingress="{{ ingress }}",
           status!~"5.*"
         }[{{ interval }}]
       )
-    )
-    /
+    ) 
+    / 
     sum(
       rate(
         nginx_ingress_controller_requests{
-          namespace="{{ namespace }}",
+          exported_namespace="{{ namespace }}",
           ingress="{{ ingress }}"
         }[{{ interval }}]
       )
-    )
+    ) 
     * 100

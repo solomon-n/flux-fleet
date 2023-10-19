@@ -6,6 +6,6 @@ resources:
 patchesStrategicMerge:
   - flagger.yaml
   - nginx-ingress-helmrelease.yaml
-
+  - metrictemplate.yaml
 namespace: flagger-system
 
