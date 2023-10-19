@@ -6,7 +6,7 @@ metadata:
 spec:
   provider:
     type: prometheus
-    address: http://promethues.monitoring.flagger-system:9090
+    address: http://flagger-prometheus.flagger-system:9090
   query: |
     100 - sum(
       rate(
