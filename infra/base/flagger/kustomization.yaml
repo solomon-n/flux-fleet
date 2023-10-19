@@ -5,5 +5,6 @@ resources:
 - metrictemplate.yaml
 - github.com/fluxcd/flagger/kustomize/base/flagger
 - github.com/fluxcd/flagger/kustomize/base/prometheus
+
 - github.com/fluxcd/flagger/kustomize/tester
 
